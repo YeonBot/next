@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Background video - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen backgrounds." />
+	<meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	<style>
+		/* Centered texts in each section
+	* --------------------------------------- */
+		.section {
+			text-align: center;
+			overflow: hidden;
+		}
+
+		#myVideo {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-size: 100% 100%;
+			background-color: black;
+			/* in case the video doesn't fit the whole page*/
+			background-image:
+				/* our video */
+			;
+			background-position: center center;
+			background-size: contain;
+			object-fit: cover;
+			/*cover video background */
+			z-index: 3;
+		}
+
+
+		/*solves problem with overflowing video in Mac with Chrome */
+		#section0 {
+			overflow: hidden;
+		}
+
+	</style>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				verticalCentered: true,
+				afterRender: function() {
+					//playing the video
+					$('video').get(0).play();
+				}
+			});
+		});
+
+	</script>
+
+</head>
+
+<body>
+
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<video autoplay loop muted id="myVideo">
+				<source src="imgs/01.mp4" type="video/mp4">
+			</video></div>
+		<div class="section" id="section1">
+			<video autoplay loop muted>
+				<source src="imgs/02.mp4" type="video/mp4">
+			</video></div>
+		<div class="section" id="section2">
+			<video autoplay loop muted>
+				<source src="imgs/03.mp4" type="video/mp4">
+			</video></div>
+		<div class="section" id="section3">
+			<video autoplay loop muted>
+				<source src="imgs/04.mp4" type="video/mp4">
+			</video></div>
+		<!--<div class="section" id="section2">
+		<embed src="imgs/04.mp4" width="1920px" height="100%" type="video/mp4">
+		</div>-->
+		<div class="section">
+			<video autoplay loop muted>
+				<source src="imgs/05.mp4" type="video/mp4">
+			</video></div>
+		<div class="section">
+			<video autoplay loop muted>
+				<source src="imgs/06.mp4" type="video/mp4">
+			</video></div>
+		<div class="section" id="section6">
+			<video autoplay loop muted>
+				<source src="imgs/07.mp4" type="video/mp4">
+			</video></div>
+			
+		<div><img src="imgs/footerimg.png" alt="" width="1920px"></div>
+		
+	</div>
+	
+
+	
+</body>
+
+</html>
