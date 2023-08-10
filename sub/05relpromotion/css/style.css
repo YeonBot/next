@@ -1,3 +1,9 @@
+.scroll-content{
+  position: relative;
+  max-width: 1920px;
+
+  margin: auto; 
+}
 
 header {
 	position: fixed;

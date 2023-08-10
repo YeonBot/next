@@ -9,9 +9,13 @@ body {
 }
 
 body {
-	margin: 0;
+	position: relative;
+  max-width: 1920px;
+
+  margin: auto;
 	background: #fff;
 }
+
 
 header {
 	width: 70%;
