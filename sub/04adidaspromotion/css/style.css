@@ -151,7 +151,7 @@ header nav ul li:hover a {
 }
 
 
-#section05 .con4 {
+#section05 .con3 {
 	width: 200px;
 	height: 200px;
 	Opacity: 0;
@@ -162,7 +162,7 @@ header nav ul li:hover a {
 	transition: all 1.5s;
 }
 
-#section05 .con4.on {
+#section05 .con3.on {
 	transform: none;
 	Opacity: 1;
 }
